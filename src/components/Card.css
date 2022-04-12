@@ -1,23 +1,23 @@
 .divCardContainer {
-  margin-left: 30px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  width: 300px;
-  height: 400px;
   background-color: white;
   border-radius: 10px;
+  color: white;
+  display: flex;
+  height: 400px;
+  justify-content: center;
+  margin-left: 30px;
+  width: 300px;
 }
 
 .divBackground {
-  display: flex;
-  justify-content: center;
   align-self: center;
-  width: 95%;
+  border-radius: 10px;
+  background-color: hsl(120, 32%, 33%);
+  border: 2px rgb(15, 155, 190) solid;
+  display: flex;
   height: 95%;
-background-color: hsl(120, 32%, 33%);
-border: 2px rgb(15, 155, 190) solid;
-border-radius: 10px;
+  justify-content: center;
+  width: 95%;
 }
 
 .divContent {

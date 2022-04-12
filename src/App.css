@@ -1,11 +1,11 @@
 .app {
-  padding: 30px;
+  background-color: rgb(15, 39, 15);
   border: 1px white solid;
   display: flex;
   justify-content: center;
-  width: auto;
   height: auto;
-  background-color: rgb(15, 39, 15);
+  padding: 30px;
+  width: auto;
 }
 
 h1 {

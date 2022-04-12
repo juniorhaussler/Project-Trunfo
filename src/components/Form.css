@@ -4,12 +4,12 @@ h2 {
 }
 
 form {
-  padding: 10px;
   background-color: white;
   border: 1px white solid;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 10px;
   width: 600px;
 }
 
@@ -21,9 +21,9 @@ label {
 button {
   align-self: center;
   background-color: blue;
+  height: 30px;
   margin: 10px;
   width: 150px;
-  height: 30px;
 }
 
 .checkboxTrunfo {
@@ -32,17 +32,17 @@ button {
 
 select {
   margin: 10px;
-  width: 200px;
   height: 30px;
+  width: 200px;
 }
 
 .inputText {
-  margin: 5px;
-  width: 80%;
-  height: 20px;
-  border-top: none;
+  border-color: black;
   border-left: none;
   border-right: none;
+  border-top: none;
+  height: 20px;
+  margin: 5px;
+  width: 80%;
   
-  border-color: black;
 }
