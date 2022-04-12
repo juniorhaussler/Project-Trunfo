@@ -49,6 +49,8 @@ class Form extends Component {
               type="number"
               name="cardAttr1"
               className="inputText"
+              min="0"
+              max="90"
               value={ cardAttr1 }
               onChange={ onInputChange }
               data-testid="attr1-input"
@@ -60,6 +62,8 @@ class Form extends Component {
               type="number"
               name="cardAttr2"
               className="inputText"
+              min="0"
+              max="90"
               value={ cardAttr2 }
               onChange={ onInputChange }
               data-testid="attr2-input"
@@ -71,6 +75,8 @@ class Form extends Component {
               type="number"
               name="cardAttr3"
               className="inputText"
+              min="0"
+              max="90"
               value={ cardAttr3 }
               onChange={ onInputChange }
               data-testid="attr3-input"
@@ -94,10 +100,11 @@ class Form extends Component {
               className="selectInput"
               onChange={ onInputChange }
               data-testid="rare-input"
+              value={ cardRare }
             >
-              <option value={ cardRare }>normal</option>
-              <option value={ cardRare }>raro</option>
-              <option value={ cardRare }>muito raro</option>
+              <option value="normal">normal</option>
+              <option value="raro">raro</option>
+              <option value="muito raro">muito raro</option>
             </select>
           </label>
           <label htmlFor="trunfo">
