@@ -3,12 +3,6 @@ import './Form.css';
 import PropTypes from 'prop-types';
 
 class Form extends Component {
-  constructor() {
-    super();
-
-    this.state = {};
-  }
-
   render() {
     const { cardName,
       cardDescription,

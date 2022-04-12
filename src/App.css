@@ -2,8 +2,8 @@
   background-color: rgb(15, 39, 15);
   border: 1px white solid;
   display: flex;
-  justify-content: center;
   height: auto;
+  justify-content: center;
   padding: 30px;
   width: auto;
 }
