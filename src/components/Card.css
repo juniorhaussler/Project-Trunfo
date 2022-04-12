@@ -12,8 +12,8 @@
 .divBackground {
   align-self: center;
   background-color: hsl(120, 32%, 33%);
-  border-radius: 10px;
   border: 2px rgb(15, 155, 190) solid;
+  border-radius: 10px;
   display: flex;
   height: 95%;
   justify-content: center;
@@ -35,14 +35,14 @@
 .cardName {
   font-weight: 500;
   height: 5%;
-  margin: 5px 5px;
-  text-align: right; 
+  margin: 5px;
+  text-align: right;
   width: 100%;
 }
 
 .img {
   background-color: white;
   display: block;
-  height: 150px; 
-  width: 95%; 
+  height: 150px;
+  width: 95%;
 }
