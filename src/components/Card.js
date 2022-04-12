@@ -17,7 +17,7 @@ class Card extends Component {
       <div className="divCardContainer">
         <div className="divBackground">
           <div className="divContent">
-            <span className="cardName" data-testid="name-card">cardName</span>
+            <span className="cardName" data-testid="name-card">{cardName}</span>
             <div className="img">
               <img
                 src={ cardImage }
@@ -44,7 +44,7 @@ class Card extends Component {
               <p data-testid="rare-card">
                 { cardRare }
               </p>
-              <p>
+              <p data-testid="trunfo-card">
                 { cardTrunfo ? 'Super Trunfo' : '' }
               </p>
             </div>

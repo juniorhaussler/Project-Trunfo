@@ -1,14 +1,16 @@
 h2 {
   color: white;
+  text-align: center;
 }
 
 form {
+  padding: 10px;
   background-color: white;
   border: 1px white solid;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 40%;
+  width: 600px;
 }
 
 label {

@@ -1,0 +1,13 @@
+.app {
+  padding: 30px;
+  border: 1px white solid;
+  display: flex;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  background-color: rgb(15, 39, 15);
+}
+
+h1 {
+  text-align: center;
+}

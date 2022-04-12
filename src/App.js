@@ -6,10 +6,12 @@ import './App.css';
 class App extends React.Component {
   render() {
     return (
-      <div className="app">
+      <div>
         <h1>Tryunfo</h1>
-        <Form />
-        <Card />
+        <div className="app">
+          <Form />
+          <Card />
+        </div>
       </div>
     );
   }
