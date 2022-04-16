@@ -12,22 +12,40 @@ class App extends React.Component {
     this.validateStateSources = this.validateStateSources.bind(this);
     this.verifyAttr = this.verifyAttr.bind(this);
     this.activeDesableButton = this.activeDesableButton.bind(this);
+    this.clearCard = this.clearCard.bind(this);
 
     this.state = {
       cardName: '',
       cardDescription: '',
-      cardAttr1: '',
-      cardAttr2: '',
+      cardAttr1: '0',
+      cardAttr2: '0',
       cardAttr3: '',
       imageSource: '',
       rarity: 'normal',
       trunfo: false,
       hasTrunfo: false,
       isSaveButtonDisabled: true,
+      cheap: [],
     };
   }
 
-  onSaveButtonClick() {}
+  onSaveButtonClick() {
+    const { cardName, cardDescription, imageSource,
+      cardAttr1, cardAttr2, cardAttr3, rarity, trunfo } = this.state;
+    const card = {
+      name: cardName,
+      description: cardDescription,
+      img: imageSource,
+      attr1: cardAttr1,
+      attr2: cardAttr2,
+      attr3: cardAttr3,
+      rarityLevel: rarity,
+      isTrunfo: trunfo,
+    };
+    this.setState(({ cheap }) => ({
+      cheap: [...cheap, card],
+    }), () => this.clearCard());
+  }
 
   onInputChange({ target }) {
     const { name } = target;
@@ -37,6 +55,18 @@ class App extends React.Component {
     }, () => {
       const control = !this.activeDesableButton();
       this.setState({ isSaveButtonDisabled: control });
+    });
+  }
+
+  clearCard() {
+    this.setState({
+      cardName: '',
+      cardDescription: '',
+      cardAttr1: '0',
+      cardAttr2: '0',
+      cardAttr3: '0',
+      imageSource: '',
+      rarity: 'normal',
     });
   }
 
