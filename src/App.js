@@ -13,19 +13,18 @@ class App extends React.Component {
     this.verifyAttr = this.verifyAttr.bind(this);
     this.activeDesableButton = this.activeDesableButton.bind(this);
     this.clearCard = this.clearCard.bind(this);
-
     this.state = {
       cardName: '',
       cardDescription: '',
       cardAttr1: '0',
       cardAttr2: '0',
-      cardAttr3: '',
+      cardAttr3: '0',
       imageSource: '',
       rarity: 'normal',
       trunfo: false,
       hasTrunfo: false,
       isSaveButtonDisabled: true,
-      cheap: [],
+      deck: [],
     };
   }
 
@@ -42,9 +41,15 @@ class App extends React.Component {
       rarityLevel: rarity,
       isTrunfo: trunfo,
     };
-    this.setState(({ cheap }) => ({
-      cheap: [...cheap, card],
+    this.setState(({ deck }) => ({
+      deck: [...deck, card],
     }), () => this.clearCard());
+
+    if (trunfo === true) {
+      this.setState(() => ({
+        hasTrunfo: true,
+      }));
+    }
   }
 
   onInputChange({ target }) {
@@ -113,6 +118,7 @@ class App extends React.Component {
       trunfo,
       hasTrunfo,
       isSaveButtonDisabled,
+      deck,
     } = this.state;
     return (
       <div>
@@ -132,16 +138,35 @@ class App extends React.Component {
             onInputChange={ this.onInputChange }
             onSaveButtonClick={ this.onSaveButtonClick }
           />
-          <Card
-            cardName={ cardName }
-            cardDescription={ cardDescription }
-            cardAttr1={ cardAttr1 }
-            cardAttr2={ cardAttr2 }
-            cardAttr3={ cardAttr3 }
-            cardImage={ imageSource }
-            cardRare={ rarity }
-            cardTrunfo={ trunfo }
-          />
+          <div className="card">
+            <Card
+              cardName={ cardName }
+              cardDescription={ cardDescription }
+              cardAttr1={ cardAttr1 }
+              cardAttr2={ cardAttr2 }
+              cardAttr3={ cardAttr3 }
+              cardImage={ imageSource }
+              cardRare={ rarity }
+              cardTrunfo={ trunfo }
+            />
+          </div>
+        </div>
+        <div>
+          {deck.map((card, index) => (
+            <div key={ index }>
+              <Card
+                cardName={ card.name }
+                cardDescription={ card.description }
+                cardAttr1={ card.attr1 }
+                cardAttr2={ card.attr2 }
+                cardAttr3={ card.attr3 }
+                cardImage={ card.img }
+                cardRare={ card.rarityLevel }
+                cardTrunfo={ card.isTrunfo }
+              />
+              <button type="button" data-testid="delete-button">Excluir</button>
+            </div>
+          ))}
         </div>
       </div>
     );
